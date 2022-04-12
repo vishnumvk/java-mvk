@@ -25,13 +25,14 @@ public class Contacts {
 		 int f=1;
 		 while(f==1) {
 		 System.out.println("Select mode (add/remove/exit/view/find):");
-		 str = sc.next();
+		 str = sc.nextLine();
 		 switch(str) {
 		 case "add":
 			System.out.println("Enter name :"); 
-			String name=sc.next(); 
+			String name=sc.nextLine(); 
 			System.out.println("Enter phone number :");
 			long ph=sc.nextLong();
+			sc.nextLine();
 		    cl.add(new Contact(name,ph));
 		    break;
 		 case "remove":
@@ -40,7 +41,7 @@ public class Contacts {
 				 break;
 				 }
 			 System.out.println("Enter contact name to remove");
-			 str=sc.next();
+			 str=sc.nextLine();
 			 try {
 				 int found =0;
 				 for(int i=0;i<cl.size();i++){
@@ -78,7 +79,7 @@ public class Contacts {
 				 break;
 				 }
 			 System.out.println("Enter name to find contact :");
-			 getNumber(sc.next(),cl);
+			 getNumber(sc.nextLine(),cl);
 			 break;
 		 default :
 			 System.out.println("Please select suggested mode");
