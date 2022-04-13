@@ -28,18 +28,18 @@ public class Calculate {
     	   }
        }
 	//Default constructor with message
-	public Calculate() {
+	/*public Calculate() {
 		
     	this("HELP"); // invokes parameterized constructor using constructor chaining
     	System.out.println(" default constructor invoked parameterized constructor");
-    }
+    }*/
 	//Constructor with string parameter
-	public Calculate(String s) {
+	/*public Calculate(String s) {
 		System.out.println("From parametrised constructor");
 		if(s.equalsIgnoreCase("HELP")) {
 			System.out.printf("Available methods in Calculate :\n cal(int ,char ,int)\n +,-,*,/ can be passed as char\n");
 		}
-    }
+    }*/
 	
 	
 	public static void main(String[] args) {

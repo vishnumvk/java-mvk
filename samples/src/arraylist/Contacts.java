@@ -18,7 +18,7 @@ public class Contacts {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		ArrayList <Contact> cl = new ArrayList <Contact>();
+		ArrayList <Contact> cl = new ArrayList <>();
 		
 		 
 		 String str;
