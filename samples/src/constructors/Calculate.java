@@ -55,7 +55,7 @@ public class Calculate {
 		System.out.println("Enter another number:");
 		n2=sc.nextInt();
         Do.cal(n1, symbol, n2);
-        
+        sc.close();
 	}
 
 }

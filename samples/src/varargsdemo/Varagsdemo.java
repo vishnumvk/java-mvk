@@ -21,5 +21,6 @@ public class Varagsdemo
 	{	
 		Calc obj = new Calc();
 		System.out.println(obj.add(4,5,6,7,874,4,3,3,4,5,6,64));
+		System.out.println(obj.add(1,2,3,4,5,6,7,8,9,10));
 	}
 }
