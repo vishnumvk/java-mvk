@@ -22,8 +22,8 @@ public class Contacts {
 		
 		 
 		 String str;
-		 int f=1;
-		 while(f==1) {
+		 boolean exit = false;
+		 do {
 		 System.out.println("Select mode (add/remove/exit/view/find):");
 		 str = sc.nextLine();
 		 switch(str) {
@@ -64,7 +64,7 @@ public class Contacts {
 			 break;
 		 case "exit":
 			 System.out.println("Exiting ...");
-			 f=0;
+			 exit=true;
 			 break;
 		 case "view":
 			 if(cl.isEmpty()) {
@@ -86,6 +86,7 @@ public class Contacts {
 		 }
 		 
 		 }
+		 while(exit);
 		 sc.close();
 		
 	}
