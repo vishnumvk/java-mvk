@@ -16,7 +16,7 @@ capacity =1;
 //creating a function that appends an element at the end of the array  
 public void addElement(int a)   
 {   
-//compares if the number of elements is equal to the size of the array or not  
+//compares if the number of elements is equal to the capacity of the array or not  
 if (count == capacity)   
 {   
 //invoking the growSize() method that creates an array of double size      
@@ -47,7 +47,7 @@ temp[i] = array[i];
 array = temp;   
 capacity= capacity * 2;   
 }   
- 
+
 
 //creating a function that removes the last elements for the array  
 public void removeElement()   
@@ -80,6 +80,17 @@ public int getSize() {
 public int getAt(int i) {
 	return array[i];
 }
+public void addArgs(int ...i) {
+	for(int a : i) {
+		addElement(a);
+	}
+}
+public void print() {
+	for (int i = 0; i < getSize(); i++)   
+	{   
+	System.out.print(getAt(i) + " ");   
+	}   
+}
 
 }  
 
@@ -100,12 +111,10 @@ public class DynamicArrayDemo {
 	da.addElement(81);   
 	da.addElement(96);   
 	da.addElement(54);  
+	da.addArgs(1,2,3,4,5);
 	System.out.println("Elements of the array:");   
-	//iterate over the array for accessing the elements  
-	for (int i = 0; i < da.getSize(); i++)   
-	{   
-	System.out.print(da.getAt(i) + " ");   
-	}   
+	 
+	da.print(); 
 	System.out.println();   
 	//determines and prints the size and number of elements of the array  
 	System.out.println("Size of the array: " + da.getSize());   
@@ -114,10 +123,7 @@ public class DynamicArrayDemo {
 	da.removeElement();   
 	//prints array after deleting the last element  
 	System.out.print("\nElements of the array after deleting the last element: ");   
-	for (int i = 0; i < da.getSize(); i++)  
-	{   
-	System.out.print(da.getAt(i) + " ");   
-	}   
+	da.print();
 	System.out.println();   
 	//determines and prints the size and number of elements of the array  
 	System.out.println("Size of the array: " + da.getSize());   
@@ -126,10 +132,7 @@ public class DynamicArrayDemo {
 	da.removeElementAt(7);   
 	System.out.print("\nElements of the array after deleting the element at index 7: ");   
 	//prints the array after deleting the element from index 7  
-	for (int i = 0; i < da.getSize(); i++)   
-	{   
-	System.out.print(da.getAt(i) + " ");   
-	}   
+     da.print();  
 	System.out.println();   
 	//determines and prints the size and number of elements of the array  
 	System.out.println("Size of the array: " + da.getSize());   
