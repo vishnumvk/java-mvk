@@ -23,7 +23,7 @@ public class Contacts {
 		 
 		 String str;
 		 boolean f = true;
-		 do {
+		 while(f) {
 		 System.out.println("Select mode (add/remove/exit/view/find):");
 		 str = sc.nextLine();
 		 switch(str) {
@@ -86,7 +86,7 @@ public class Contacts {
 		 }
 		 
 		 }
-		 while(f);
+		 
 		 sc.close();
 		
 	}
