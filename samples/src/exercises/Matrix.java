@@ -52,7 +52,7 @@ public class Matrix {
 		}
 		
 
-
+s.close();
 	}
 
 }
