@@ -36,7 +36,7 @@ public class Abstractdemo {
 		//Bike b1 = new Bike(); b1 cannot be created since its class contains abstracted member
 		//A non abstract subclass needs to override all abstract methods of parent class 
 		obj.run();
-		obj.changeGear();
+		//obj.changeGear();
 		Bike.changeGear();
 		}
 }
