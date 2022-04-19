@@ -1,4 +1,4 @@
-package dynamic_array;
+package examples.dynamic_array;
 class DynamicArray 
 {   
 private int array[];   

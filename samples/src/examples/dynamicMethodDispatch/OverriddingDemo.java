@@ -1,4 +1,4 @@
-package dynamicMethodDispatch;
+package examples.dynamicMethodDispatch;
 
 class Aa
 {

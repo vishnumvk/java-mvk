@@ -1,4 +1,4 @@
-package abstractdemo;
+package examples.abstractdemo;
 //example of abstract class that have method body
 abstract class Bike{
 	
