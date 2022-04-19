@@ -1,4 +1,4 @@
-package inheritance;
+package examples.inheritance;
 // when there is no default constructor in super class then we have to explicitly call it in subclass constructor
 class A
 {

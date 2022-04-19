@@ -1,4 +1,4 @@
-package arraylist;
+package examples.arraylist;
 import java.util.*;
 class Contact{
 	String name;

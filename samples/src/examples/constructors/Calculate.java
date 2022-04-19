@@ -1,4 +1,4 @@
-package constructors;
+package examples.constructors;
 // example involving constructors and constructor chaining
 import java.util.*;
 public class Calculate {

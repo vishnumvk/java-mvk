@@ -1,4 +1,4 @@
-package anonymous;
+package examples.anonymous;
 
 interface Ac
 {

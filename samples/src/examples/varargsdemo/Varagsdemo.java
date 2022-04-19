@@ -1,4 +1,4 @@
-package varargsdemo;
+package examples.varargsdemo;
 
 class Calc
 {

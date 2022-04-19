@@ -1,4 +1,4 @@
-package interfacedemo;
+package examples.interfacedemo;
 interface MyInterface{
 	   public static int num = 100;
 	   public default void display() {

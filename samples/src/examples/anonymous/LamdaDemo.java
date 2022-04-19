@@ -1,4 +1,4 @@
-package anonymous;
+package examples.anonymous;
 
 //Types of interface
 //1. Normal

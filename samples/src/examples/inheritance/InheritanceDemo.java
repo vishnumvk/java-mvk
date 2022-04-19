@@ -1,4 +1,4 @@
-package inheritance;
+package examples.inheritance;
 
 //IS-A, HAS-A
 
