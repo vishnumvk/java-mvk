@@ -6,13 +6,19 @@ class A
 	{
 		System.out.println("in A");
 	}*/
+	public void show() {
+		System.out.println("Show of A");
+	}
 	public A(int i)
 	{
 		System.out.println("in A int");
 	}
 }
 class B extends A
-{
+{   
+	public void show() {
+		System.out.println("Show of B");
+	}
 	public B()
 	{
 		super(5);
@@ -29,6 +35,8 @@ public class SuperDemo
 {
 	public static void main(String[] args)
 	{	
-		 new B();
+		 A a = new B();
+		 System.out.println(a.getClass().getName());
+		 a.show();
 	}
 }

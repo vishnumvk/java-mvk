@@ -13,10 +13,10 @@ class Calculator      // Super
 
 class CalcAdv extends Calculator     // Sub
 {
-//	public int add(int i,int j)
-//	{
-//		return i+j;
-//	}
+	public int add(int i,int j,int k)
+	{
+		return i+j+k;
+	}
 	public int sub(int i,int j)
 	{
 		return i-j;
@@ -43,5 +43,6 @@ public class InheritanceDemo
 		System.out.println(result1);
 		System.out.println(result2);
 		System.out.println(result3);
+		System.out.println(c1.add(result1, result2, result3)); 
 	}
 }
