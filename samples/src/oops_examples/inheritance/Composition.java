@@ -62,5 +62,6 @@ class Composition {
 			// print data
 			System.out.println("Name : " + office.name + "  " + " Address : " + office.address);
 		}
+		Company company2 = new Company("Zoho", null);
 	}
 }
