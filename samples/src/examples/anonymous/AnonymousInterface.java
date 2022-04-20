@@ -8,7 +8,7 @@ interface Ac
 public class AnonymousInterface 
 {
 	public static void main(String[] args)
-	{
+	{  
 		Ac obj = new Ac()
 				{
 					public void show()
