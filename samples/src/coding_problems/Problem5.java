@@ -18,12 +18,34 @@ Input: Happy Holi!
 Output: none
  */
 public class Problem5 {
+	     public static boolean checkSubstring(String str1 , String str2) {
+	    	 
+	    	 if(str2.length()>str1.length()) {
+	    		 return false;
+	    	 }
+	    	 else {
+	    		 
+	    		 for(int i=0;i<=(str1.length()-str2.length());i++) {
+	    			 int f=0;
+	    			 for(int j=0;j<str2.length();j++) {
+	    				 if(str1.charAt(j+i)==str2.charAt(j)) {
+	    					 f++;
+	    				 }
+	    			 }
+	    			 if(f==str2.length()) {
+	    				 return true;
+	    			 }
+	    		 }
+	    		 return false;
+	    	 }
+	     }
 	     public static ArrayList<String> filter(ArrayList<String> sl) {
 	    	 ArrayList<String> filtered = new ArrayList<>(sl);
 	    	 for(int i=0; i<sl.size(); i++) {
 	 			for(int j=0; j<sl.size(); j++) {
-	 				if(j!=i) {
-	 					if(sl.get(i).contains(sl.get(j))) {
+	 				if(j!=i) {	 					
+	 					if(checkSubstring(sl.get(i),sl.get(j))) {
+	 						
 	 						filtered.remove(sl.get(j));
 	 					}
 	 				}
@@ -38,7 +60,7 @@ public class Problem5 {
         	 str = str+a[i];
         	 
         	 for(int s = i+1, r=j+1;r<a.length;s++,r++) {
-        		 if(a[s]==a[r] && s!=j) {
+        		 if(a[s]==a[r] && s!=j && a[s]!=' ') {
         			 str=str+a[s];
         			
         		 }
@@ -68,11 +90,13 @@ public class Problem5 {
 			}
 			
 		}
+
 		ArrayList<String> filtered = filter(sl);
 		if(filtered.isEmpty()) {
 			System.out.println("none");
 		}
 		else {
+			
 		for(String sub : filtered) {
 			System.out.println(sub);
 		}
