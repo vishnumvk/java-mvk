@@ -1,6 +1,5 @@
 package coding_problems;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /*
@@ -21,50 +20,45 @@ Input: 2, -1, 0, -1, 3
 Output: 3, 0, 3, 3, -1 
  */
 public class Problem3 {
-    public static int getMax(int []a,int n) {
-    	int max = a[n];
-    	int b[]= Arrays.copyOfRange(a, n+1, a.length);
-    	Arrays.sort(b);
-    	for(int i=0;i<b.length;i++) {
-    		if(b[i]>max) {
-    			return b[i];
-    		}
-    	}
-    	return max;
-    }
-	
-	
+	public static int getNextMax(int[] a, int n) {
+
+		int max = Integer.MAX_VALUE;
+
+		for (int i = n + 1; i < a.length; i++) {
+			if (a[i] > a[n] && a[i] < max) {      // finds the next maximum 
+				max = a[i];
+			}
+		}		
+		return max;
+	}
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
 		sc.close();
-		String ca[]=str.split(",[ ]*");
-		int arraysize = (ca.length);
-		int a[]=new int[arraysize];
-		for(int i=0;i<ca.length;i++) {
-			a[i]=Integer.parseInt(ca[i]);
-		}
-		// a = input array
-		int sol [] = new int[arraysize];
-		for(int i=0;i<sol.length;i++) {
-			sol[i]=-1;
-		}
+		String ca[] = str.split(",[ ]*");      //
+		int arraysize = (ca.length);           // to create int array from comma seperated input
+		int a[] = new int[arraysize];          //
+											   //
+		for (int i = 0; i < ca.length; i++) {  //
+			a[i] = Integer.parseInt(ca[i]);    //
+		}									   //
+		
+		
+		for (int i = 0; i < a.length-1; i++) {
+			int temp = getNextMax(a, i);
+			if (temp == Integer.MAX_VALUE) {
+				for (int n = i; n < a.length-1; n++) {   // if next max is not present then prints
+					System.out.printf("%d, ", -1);       // -1 instead of remaining elements      
+				}                                        //  This loop will be executed only once
 				
-		for(int i=0;i<a.length;i++) {
-			int temp =getMax(a,i);
-			if(temp==a[i]) {
 				break;
-				
+
+			} else {				
+				System.out.printf("%d, ", temp);
 			}
-			else {
-				sol[i]=temp;
-			}
-		}
-		for(int i=0;i<sol.length-1;i++) {
-			
-			System.out.printf("%d, ",sol[i]);
-		}
-		System.out.println(sol[sol.length-1]);
+		}		
+		System.out.println(-1);
 	}
 
 }
