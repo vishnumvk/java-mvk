@@ -14,27 +14,27 @@ public class Problem4 {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("enter number of ballons ");
 		int n = sc.nextInt();
-		char ballons[]= new char[n];
-		char order[]= new char[3];
-		ballons[0]=sc.next().charAt(0);
-		int bo=0;
-		order[bo]=ballons[0];
-		for(int i=1;i<n;i++) {
-			ballons[i]=sc.next().charAt(0);  
-			if(ballons[i]!=order[0] && ballons[i]!=order[1] && ballons[i]!=order[2] ) {
+		char ballons[] = new char[n];
+		char order[] = new char[3];
+
+		int bo = 0;
+		for (int i = 0; i < n; i++) {
+			ballons[i] = sc.next().charAt(0);
+			if (ballons[i] != order[0] && ballons[i] != order[1] && ballons[i] != order[2]) {
+				
+				order[bo] = ballons[i];
 				bo++;
-				order[bo]=ballons[i];
 			}
 		}
 		sc.close();
-		for(int i=0;i<order.length;i++) {
-			for(int j=0;j<ballons.length;j++) {
-				if(ballons[j]==order[i]) {
-					System.out.printf("%c ",ballons[j]);
+		for (int i = 0; i < order.length; i++) {
+			for (int j = 0; j < ballons.length; j++) {
+				if (ballons[j] == order[i]) {
+					System.out.printf("%c ", ballons[j]);
 				}
 			}
 		}
-		
+
 	}
 
 }
