@@ -89,8 +89,6 @@ public class Problem6 {
 		}
 		for (int i = 0; i < lines.size() ; i++) {
 	        String justifiedLine = justifyString(lines.get(i).trim(), linelen);
-	        lines.remove(i);
-	        lines.add(i, justifiedLine);
 	        System.out.println(justifiedLine);
 	    }
 
