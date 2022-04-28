@@ -53,18 +53,19 @@ public class Problem6 {
 	    int wordSeparation = words.length > 1 ? remainingSpace / (words.length - 1) : remainingSpace;
 	    int extraSpace = remainingSpace -( (words.length - 1)*wordSeparation);
 	    int leftslots = extraSpace;
-	    for (int j = 0; j < words.length - 1; j++) {
+	    for (int j = 0; j < words.length -1; j++) {
 	        justifiedLine.append(words[j]);
-	        for (int i = 0; i < wordSeparation; i++)
-	            justifiedLine.append(" ");
+	        for (int i = 0; i < wordSeparation; i++) {
+	            justifiedLine.append(" ");}
 	        if (extraSpace > 0 && j==words.length-1-leftslots) {
 	            justifiedLine.append(" ");
 	            extraSpace--;
 	        }
 	    }
 	    justifiedLine.append(words[words.length - 1]);
+	    if(words.length==1) {
 	    for (int i = 0; i < extraSpace; i++)
-	        justifiedLine.append(" ");
+	        justifiedLine.append(" ");}
 	    return justifiedLine.toString();
 	}
 
