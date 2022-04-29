@@ -60,6 +60,7 @@ public class Problem6 {
 	        if (extraSpace > 0 && j==words.length-1-leftslots) {
 	            justifiedLine.append(" ");
 	            extraSpace--;
+	            leftslots--;
 	        }
 	    }
 	    justifiedLine.append(words[words.length - 1]);
