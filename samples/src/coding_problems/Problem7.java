@@ -48,11 +48,12 @@ public class Problem7 {
     		return true;
     	} 	
     	else {
-    		if(x==digitSum(x)) {
+    		int sum = digitSum(x);
+    		if(x==sum) {
         		return false;
         	}
     		else {
-    		return checkTraps(digitSum(x),y);
+    		return checkTraps(sum,y);
     		}
     	}
     }
@@ -63,6 +64,11 @@ public class Problem7 {
 	      int y = sc.nextInt();
 	      sc.close();
 	      int count =0;
+	      if(n1>n2) {
+	    	  int temp=n2;
+	    	  n2=n1;
+	    	  n1=temp;
+	      }
 	      for(int x=n1;x<=n2;x++) {
 	    	  if(checkTraps(x,y)) {
 	    		  System.out.printf("%d ",x);

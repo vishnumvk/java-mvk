@@ -1,6 +1,5 @@
 package coding_problems;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /*
@@ -15,13 +14,13 @@ Output: 0 to 7
 Input: {1, 0, 1, 1, 1, 0, 0}
 Output: 1 to 6
 
-Input: {1,1,1}
+Input: {1, 1, 1}
 Output: No sub-array found.
  */
 public class Problem2 {
-    public static boolean checkArray(int n[]) {
+    public static boolean checkArray(int n[],int start,int end) {
     	int z=0,o=0;
-    	for(int i=0;i<n.length;i++) {
+    	for(int i=start;i<end;i++) {
     		if(n[i]==0) {
     			z++;
     		}
@@ -51,10 +50,11 @@ public class Problem2 {
 			for(int i=0;i<=(a.length-size);i++) {
 				
 
-				int sub []= Arrays.copyOfRange(a, i, i+size);
-				if(checkArray(sub)) {
+				
+				
+				if(checkArray(a,i,i+size)) {
 					found = true;
-		        	System.out.printf("%d to %d\n",i,i-1+sub.length);
+		        	System.out.printf("%d to %d\n",i,i+size-1);
 		        	break loop;
 		        }
 			}

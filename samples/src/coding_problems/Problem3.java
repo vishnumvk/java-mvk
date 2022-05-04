@@ -48,11 +48,12 @@ public class Problem3 {
 		for (int i = 0; i < a.length-1; i++) {
 			int temp = getNextMax(a, i);
 			if (temp == Integer.MAX_VALUE) {
-				for (int n = i; n < a.length-1; n++) {   // if next max is not present then prints
-					System.out.printf("%d, ", -1);       // -1 instead of remaining elements      
-				}                                        //  This loop will be executed only once
-				
-				break;
+				System.out.printf("%d, ", -1);
+//				for (int n = i; n < a.length-1; n++) {   // if next max is not present then prints
+//					System.out.printf("%d, ", -1);       // -1 instead of remaining elements      
+//				}                                        //  This loop will be executed only once
+//				
+				//break;
 
 			} else {				
 				System.out.printf("%d, ", temp);
